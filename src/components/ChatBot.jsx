@@ -96,7 +96,7 @@ const ChatBot = () => {
     default: 'https://5ef2e9bd1b39.ngrok-free.app/chat'
   };
 
-  // Send message logic
+  // Send message 
   const sendMessage = async () => {
     if (!input.trim()) return;
 
