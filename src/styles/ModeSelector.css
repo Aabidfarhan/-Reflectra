@@ -1,0 +1,62 @@
+/* Container for dropdown mode selector */
+.mode-selector-inline {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trigger Button */
+.dropdown-trigger {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chatbot-container.dark .dropdown-trigger {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+/* Dropdown Menu - Appears ABOVE the trigger */
+.dropdown-menu {
+  position: absolute;
+  bottom: 100%; /* makes it appear above */
+  left: 0;
+  margin-bottom: 6px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 9999;
+  min-width: 200px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.chatbot-container.dark .dropdown-menu {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* Each Item */
+.dropdown-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.chatbot-container.dark .dropdown-item:hover {
+  background-color: #333;
+}

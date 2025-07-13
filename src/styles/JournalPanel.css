@@ -1,0 +1,266 @@
+.journal-panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.journal-panel {
+  background: #1e1e1e;
+  padding: 24px;
+  border-radius: 16px;
+  width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: white;
+}
+
+.journal-panel textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  background: #2a2a2a;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.save-journal {
+  padding: 10px 16px;
+  background-color: #00ffaa;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.journal-history {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.journal-entry {
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.journal-title-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: white;
+}
+
+.journal-edit-area {
+  width: 100%;
+  background: #2b2b2b;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  margin: 10px 0;
+  resize: vertical;
+}
+.edit-btn {
+  background: none;
+  border: none;
+  color: #00ffaa;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+.journal-title-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  background: #2b2b2b;
+  border: none;
+  color: white;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.journal-edit-area {
+  width: 100%;
+  padding: 10px;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  resize: vertical;
+  margin-top: 6px;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  color: #00ffaa;
+  cursor: pointer;
+}
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  color: #00ffaa;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-btn {
+  color: #ff5c5c;
+}
+.journal-title-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  background: #2b2b2b;
+  border: none;
+  color: white;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.journal-edit-area {
+  width: 100%;
+  padding: 10px;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  resize: vertical;
+  margin-top: 6px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.edit-btn {
+  color: #00ffaa;
+}
+
+.delete-btn {
+  color: #ff5c5c;
+}
+ 
+/* Overlay */
+.journal-panel-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+/* Panel */
+.journal-panel {
+  background: #1e1e1e;
+  padding: 24px;
+  border-radius: 16px;
+  width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: white;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: transparent;
+  color: hotpink;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 20px 0;
+  opacity: 0.3;
+}
+
+.journal-title-input,
+.journal-edit-area,
+textarea {
+  width: 100%;
+  background: #2a2a2a;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+/* Journal History */
+.journal-history {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.journal-entry {
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: gray;
+}
+
+.entry-content {
+  white-space: pre-wrap;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.edit-btn {
+  color: #00ffaa;
+}
+
+.delete-btn {
+  color: #ff5c5c;
+}

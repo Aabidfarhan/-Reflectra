@@ -1,0 +1,347 @@
+/* Base Styles */
+.chatbot-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f7f9; /* light default */
+  color: #222;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.chatbot-container.dark {
+  background-color: #0f1117;
+  color: #f0f0f0;
+}
+
+/* Main Area */
+.main-content {
+  flex: 1;
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 60px;
+}
+
+/* Chat Box Area */
+.chat-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-container.dark .chat-area {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Messages */
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #00bcd4 transparent;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.message.me {
+  align-self: flex-end;
+  background-color: #80deea; /* light blue */
+  color: #00363a;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #e3f2fd; /* pale blue */
+  color: #0d47a1;
+}
+
+.chatbot-container.dark .message.me {
+  background-color: #00838f;
+  color: #e0f7fa;
+}
+
+.chatbot-container.dark .message.ai {
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+
+/* Input area */
+.chat-input-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  color: #111;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chatbot-container.dark .chat-input-area input {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Send Button */
+.chat-input-area button {
+  padding: 12px 18px;
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.chat-input-area button:hover {
+  background-color: #009688;
+}
+
+.clear-chat-btn {
+  margin-top: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  background: #eceff1;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.chatbot-container.dark .clear-chat-btn {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: white;
+}
+/* CBT ModeSelector Dropdown */
+.mode-toggle-wrapper {
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 100;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chatbot-container.dark .dropdown-button {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  list-style: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 200px;
+  z-index: 999;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.chatbot-container.dark .dropdown-list {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+.dropdown-list li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.chatbot-container.dark .dropdown-list li:hover {
+  background-color: #333;
+}
+.clear-chat-btn {
+  background-color: #ffecec;
+  color: #d00;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+  transition: background 0.2s;
+}
+
+.clear-chat-btn:hover {
+  background-color: #ffdddd;
+}
+.chatbot-container.dark {
+  background-color: #0f1117;
+  color: #f0f0f0;
+}
+/* Adjusts chat input when sidebar is collapsed */
+.responsive-chat-input {
+  width: 100%;
+  max-width: 100%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.main-content.expanded .responsive-chat-input {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.message {
+  position: relative;
+}
+
+.speak-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin-top: 6px;
+  cursor: pointer;
+  color: #0d47a1;
+  transition: opacity 0.2s ease;
+}
+
+.chatbot-container.dark .speak-button {
+  color: #cbd5e1;
+}
+
+.message.ai:hover .speak-button {
+  display: inline-block;
+}
+.speak-button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.bubble-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message.ai:hover .speak-button {
+  opacity: 1;
+}
+.chat-input-container {
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.mode-selector {
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mode-selector button {
+  background: #f0f0f0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.mode-selector button.active {
+  background: #4a90e2;
+  color: white;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.input-row button {
+  background: #4a90e2;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
