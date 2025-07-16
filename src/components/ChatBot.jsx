@@ -17,7 +17,7 @@ const MessageBubble = ({ msg, voice }) => {
     if (voice) utterance.voice = voice;
     speechSynthesis.speak(utterance);
   };
-
+  
   return (
     <div className={`message ${msg.sender}`}>
       <div className="bubble-wrapper">
@@ -74,7 +74,7 @@ const ChatBot = () => {
     loadVoice();
     speechSynthesis.onvoiceschanged = loadVoice;
   }, []);
-
+                                                   
   // Persist dark mode across refresh
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode');
@@ -93,7 +93,7 @@ const ChatBot = () => {
     distortion_detection: 'https://your-distortion-url.ngrok-free.app/chat',
     thought_deframing: 'https://your-deframe-url.ngrok-free.app/chat',
     affirmation_separator: 'https://8f638e8e2d67.ngrok-free.app/affirmation',
-    default: 'https://5ef2e9bd1b39.ngrok-free.app/chat'
+    default: 'https://29c4bbed7267.ngrok-free.app/chat'
   };
 
   // Send message 

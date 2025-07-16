@@ -1,3 +1,4 @@
+/* ────────── Sidebar Container ────────── */
 .sidebar {
   position: fixed;
   left: 0;
@@ -18,6 +19,7 @@
   width: 60px;
 }
 
+/* ────────── Toggle Button ────────── */
 .sidebar-toggle {
   background: #333;
   color: white;
@@ -26,8 +28,56 @@
   margin-bottom: 20px;
   border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
+.sidebar-toggle:hover {
+  background: #444;
+}
+
+/* ────────── Logo Section ────────── */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+}
+
+.sidebar:not(.collapsed) .logo {
+  width: 80px;
+  animation: glowPulse 2s infinite ease-in-out;
+  filter: drop-shadow(0 0 16px rgba(0, 255, 255, 0.9));
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 1));
+  animation: none;
+}
+
+/* ────────── App Title ────────── */
+.app-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00e5ff;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .app-title {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* ────────── Sidebar Menu ────────── */
 .sidebar-menu {
   list-style: none;
   padding: 0;
@@ -42,13 +92,23 @@
   cursor: pointer;
   border-radius: 10px;
   font-size: 18px;
-  transition: background 0.2s;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
 }
 
+/* Default hover */
 .sidebar-menu li:hover {
   background: #222;
+  color: #00e5ff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
 }
 
+/* Animate glowing hover only when sidebar is expanded */
+.sidebar:not(.collapsed) .sidebar-menu li:hover {
+  animation: glowPulse 1.6s infinite ease-in-out;
+}
+
+/* Hide labels when collapsed */
 .sidebar-menu .label {
   margin-left: 12px;
   white-space: nowrap;
@@ -56,4 +116,14 @@
 
 .sidebar.collapsed .label {
   display: none;
+}
+
+/* ────────── Pulse Animation ────────── */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  }
 }

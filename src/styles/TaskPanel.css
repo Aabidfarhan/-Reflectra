@@ -27,6 +27,7 @@
 .task-title {
   font-size: 20px;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .add-task-btn {
@@ -37,6 +38,12 @@
   padding: 8px 14px;
   margin: 10px 0;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.add-task-btn:hover {
+  background-color: #00c2e0;
 }
 
 .task-form input {
@@ -45,6 +52,12 @@
   margin-bottom: 6px;
   border: none;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.task-form input::placeholder {
+  color: #ddd;
 }
 
 .task-form button {
@@ -55,6 +68,11 @@
   cursor: pointer;
   color: black;
   font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.task-form button:hover {
+  background-color: #00dd88;
 }
 
 .task-cards {
@@ -69,9 +87,36 @@
   padding: 12px;
   border-radius: 10px;
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-card:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.02);
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.task-actions button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.task-actions button:last-child {
+  color: #ff4f4f;
 }

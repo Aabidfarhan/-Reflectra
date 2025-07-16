@@ -5,3 +5,51 @@ body, html, #root {
   width: 100%;
   overflow: hidden;
 }
+.spline-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1.5s ease-in-out;
+  z-index: 10;
+  pointer-events: none; /* Prevents interaction */
+  opacity: 1;
+}
+
+/* After intro, shrink and fade into background */
+.spline-wrapper.shrink {
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: -1;
+  filter: blur(1px);
+}
+.chatbot-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.chatbot-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.foreground-content {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+

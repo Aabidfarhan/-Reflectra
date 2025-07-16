@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Sidebar.css';
+import '../styles/Sidebar.css'; // Keep your CSS import
 
 const Sidebar = ({ onSelect, selected }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -13,7 +13,6 @@ const Sidebar = ({ onSelect, selected }) => {
     { key: 'newJournal', label: 'New Journal', icon: '➕' },
     { key: 'bookTherapist', label: 'Book Therapist', icon: '📅' },
     { key: 'sessionSummary', label: 'Session Summary', icon: '🧾' },
-    // 🧠 CBT Modes removed
   ];
 
   return (
@@ -25,6 +24,12 @@ const Sidebar = ({ onSelect, selected }) => {
       >
         {collapsed ? '☰' : '✖'}
       </button>
+
+      {/* Logo section */}
+      <div className="logo-container" title="Aura">
+        <img src="/LOGO.png" alt="AURA Logo" className="logo" />
+        {!collapsed && <h1 className="app-title">AURA</h1>}
+      </div>
 
       <ul className="sidebar-menu">
         {menuItems.map((item) => (
