@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Aura.Therapy/static/css/main.ffa229ce.css",
+    "main.js": "/Aura.Therapy/static/js/main.76e71fe4.js",
+    "index.html": "/Aura.Therapy/index.html",
+    "main.ffa229ce.css.map": "/Aura.Therapy/static/css/main.ffa229ce.css.map",
+    "main.76e71fe4.js.map": "/Aura.Therapy/static/js/main.76e71fe4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffa229ce.css",
+    "static/js/main.76e71fe4.js"
+  ]
+}
